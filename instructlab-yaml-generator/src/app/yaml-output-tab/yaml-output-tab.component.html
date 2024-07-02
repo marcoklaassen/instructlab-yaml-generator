@@ -1,0 +1,14 @@
+<div class="formbold-form-step-3 active">
+  <div class="formbold-form-confirm">
+    <pre>{{ this.taxonomyYaml$ | async }}</pre>
+    <div></div>
+
+    <br />
+    <p class="blueText">
+      If you would like to double check your generated YAML, copy and paste the
+      above into
+      <a href="https://www.yamllint.com/" target="_blank">YAML Lint</a>
+    </p>
+    <next-button [nextTab]="'/'" [title]="'Start over'"></next-button>
+  </div>
+</div>

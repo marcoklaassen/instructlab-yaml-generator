@@ -1,0 +1,33 @@
+<div class="formbold-form-step-1">
+  <div class="formbold-input-flex">
+    <form [formGroup]="this.detailsForm">
+      <div>
+        <label for="githubuser" class="formbold-form-label">
+          Github User
+        </label>
+        <input
+          type="text"
+          id="githubuser"
+          placeholder="MyGithubUserName"
+          id="githubuser"
+          class="formbold-form-input"
+          formControlName="githubUser"
+          required
+        />
+      </div>
+      <div>
+        <label for="skillname" class="formbold-form-label"> Skill Name </label>
+        <input
+          type="text"
+          id="skillname"
+          placeholder="A New skill to do XYZ"
+          id="skillname"
+          class="formbold-form-input"
+          formControlName="skillName"
+          required
+        />
+      </div>
+    </form>
+  </div>
+  <next-button [nextTab]="'/questions'"></next-button>
+</div>

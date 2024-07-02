@@ -1,0 +1,34 @@
+<div class="formbold-form-step-2">
+  <form [formGroup]="this.qaForm">
+    <div formArrayName="questions">
+      <div
+        *ngFor="let question of questions.controls; let i = index"
+        [formGroupName]="i"
+      >
+        <div class="formbold-input-flex">
+          <div>
+            <label class="formbold-form-label"> Question {{ i + 1 }}</label>
+            <input formControlName="question" class="formbold-form-input" />
+          </div>
+          <div>
+            <label class="formbold-form-label"> Answer {{ i + 1 }}</label>
+            <input formControlName="answer" class="formbold-form-input" />
+          </div>
+          <button
+            type="button"
+            class="formbold-btn"
+            (click)="removeQuestion(i)"
+          >
+            -
+          </button>
+        </div>
+      </div>
+      <div class="formbold-input-flex">
+        <button type="button" class="formbold-btn" (click)="addQuestion()">
+          +
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
+<next-button [nextTab]="'/output'"></next-button>
